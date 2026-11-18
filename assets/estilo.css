@@ -24,6 +24,10 @@ body {
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   min-height: 100vh;
   background: var(--fondo);
@@ -271,13 +275,23 @@ a {
    ============================================================ */
 
 body.visor {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
+  overscroll-behavior: none;
   background: #05070a;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
+/* absolute (no fixed) para que el alto sea el viewport dinámico del celular
+   y no quede tapado por la barra del navegador */
 #app {
-  position: fixed;
+  position: absolute;
   inset: 0;
+  height: 100%;
 }
 
 #panorama {
@@ -285,6 +299,7 @@ body.visor {
   inset: 0;
   width: 100%;
   height: 100%;
+  touch-action: none;
 }
 
 .barra {
@@ -447,6 +462,13 @@ body.visor {
   overflow-x: auto;
   scrollbar-width: none;
   background: linear-gradient(to top, rgba(4, 7, 11, 0.82), rgba(4, 7, 11, 0));
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+body.ui-oculta .tira {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
 }
 
 .tira::-webkit-scrollbar {
@@ -586,5 +608,55 @@ body.visor {
 
   .tira__item {
     width: 96px;
+  }
+}
+
+/* Controles táctiles: evita el zoom por doble toque */
+
+.boton-volver,
+.nav-flecha,
+.tira__item {
+  touch-action: manipulation;
+}
+
+/* Celular en horizontal: interfaz compacta para que el panorama gane lugar */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .barra {
+    padding: 8px 14px;
+    gap: 10px;
+  }
+
+  .boton-volver {
+    width: 32px;
+    height: 32px;
+  }
+
+  .barra__titulo {
+    font-size: 0.86rem;
+  }
+
+  .barra__sub {
+    display: none;
+  }
+
+  .barra__contador {
+    padding: 4px 9px;
+    font-size: 0.7rem;
+  }
+
+  .tira {
+    gap: 8px;
+    padding: 8px 14px calc(8px + env(safe-area-inset-bottom));
+  }
+
+  .tira__item {
+    width: 84px;
+  }
+
+  .nav-flecha {
+    width: 34px;
+    height: 34px;
+    margin-top: -17px;
   }
 }

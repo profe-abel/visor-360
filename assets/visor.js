@@ -14,6 +14,26 @@ let viewer = null
 let lista = []
 let indice = 0
 
+// Campo de visión: en pantalla horizontal mantenemos 100° de ancho; en pantalla
+// vertical fijamos el alto en 80°, porque con 100° de ancho el vertical se iría
+// a ~138° y el panorama se vería estirado en los bordes.
+const HFOV_HORIZONTAL = 100
+const VFOV_VERTICAL = 80
+const MIN_HFOV = 30
+const MAX_HFOV = 110
+
+const RAD = Math.PI / 180
+
+function hfovDeseado() {
+  const ancho = window.innerWidth || document.documentElement.clientWidth
+  const alto = window.innerHeight || document.documentElement.clientHeight
+  if (!ancho || !alto) return HFOV_HORIZONTAL
+
+  const desdeVertical = 2 * Math.atan(Math.tan(((VFOV_VERTICAL / 2) * Math.PI) / 180) * (ancho / alto)) / RAD
+  const hfov = Math.min(HFOV_HORIZONTAL, desdeVertical)
+  return Math.max(MIN_HFOV, Math.min(MAX_HFOV, hfov))
+}
+
 // --- plantillas ------------------------------------------------------------
 
 function capaCarga(mensaje) {
@@ -99,6 +119,8 @@ function montar(extra) {
 
   document.getElementById('anterior')?.addEventListener('click', () => mover(-1))
   document.getElementById('siguiente')?.addEventListener('click', () => mover(1))
+
+  mostrarTira()
 }
 
 function escapar(texto) {
@@ -154,6 +176,52 @@ function mover(paso) {
   irA(lista[destino].id)
 }
 
+// --- tira de escenas: en horizontal se oculta sola -------------------------
+
+let temporizadorTira = null
+
+function pantallaHorizontalBaja() {
+  return window.innerWidth > window.innerHeight && window.innerHeight < 500
+}
+
+function mostrarTira() {
+  clearTimeout(temporizadorTira)
+  cuerpo.classList.remove('ui-oculta')
+  if (!pantallaHorizontalBaja() || !document.getElementById('tira')) return
+  temporizadorTira = setTimeout(() => {
+    if (pantallaHorizontalBaja()) cuerpo.classList.add('ui-oculta')
+  }, 3500)
+}
+
+cuerpo.addEventListener('pointerdown', mostrarTira, { passive: true })
+
+// --- adaptación al giro / cambio de tamaño ---------------------------------
+
+let frameResize = null
+
+function recalcularVista() {
+  if (!viewer) return
+  viewer.resize()
+  viewer.setHfov(hfovDeseado(), false)
+  mostrarTira()
+}
+
+function alRedimensionar() {
+  if (frameResize) cancelAnimationFrame(frameResize)
+  frameResize = requestAnimationFrame(() => {
+    frameResize = null
+    recalcularVista()
+  })
+}
+
+addEventListener('resize', alRedimensionar)
+addEventListener('orientationchange', () => {
+  // Los navegadores móviles informan el tamaño viejo durante unos ms
+  setTimeout(alRedimensionar, 150)
+  setTimeout(alRedimensionar, 450)
+})
+window.visualViewport?.addEventListener('resize', alRedimensionar)
+
 // --- arranque --------------------------------------------------------------
 
 async function iniciar() {
@@ -208,7 +276,7 @@ async function iniciar() {
     escenas[vista.id] = {
       type: 'equirectangular',
       panorama: `${base}${vista.archivo}`,
-      hfov: 100,
+      hfov: hfovDeseado(),
       autoRotate: -1.2,
       autoRotateInactivityDelay: 5000,
     }
@@ -220,12 +288,14 @@ async function iniciar() {
         firstScene: lista[indice].id,
         sceneFadeDuration: 600,
         autoLoad: true,
+        minHfov: MIN_HFOV,
+        maxHfov: MAX_HFOV,
       },
       scenes: escenas,
       showZoomCtrl: window.matchMedia('(pointer: fine)').matches,
       showFullscreenCtrl: true,
       compass: false,
-      backgroundColor: [5, 7, 10],
+      backgroundColor: [0.02, 0.03, 0.04],
     })
   } catch (error) {
     app.innerHTML = capaError('No pude iniciar el visor', escapar(error.message || 'Error desconocido'), modo === 'vista')
@@ -234,12 +304,18 @@ async function iniciar() {
 
   viewer.on('load', () => {
     document.getElementById('capa')?.classList.add('oculto')
+    // Al cambiar de escena Pannellum vuelve al hfov declarado; lo recalculamos
+    // para que en vertical no se estire.
+    viewer?.setHfov(hfovDeseado(), false)
+    mostrarTira()
   })
 
   viewer.on('scenechange', (id) => {
     titulos(id)
     marcarActiva(id)
   })
+
+  viewer.on('fullscreenchange', () => setTimeout(alRedimensionar, 150))
 
   viewer.on('error', (mensaje) => {
     const capa = document.getElementById('capa')

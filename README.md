@@ -89,9 +89,21 @@ npm run solo -- banio-1 banio-2
 }
 ```
 
+## Celular
+
+- En horizontal la vista usa 100° de ancho; en vertical se fija el alto en 80°
+  para que el panorama no se deforme en pantallas angostas.
+- Al girar el teléfono se recalcula el tamaño del lienzo y el campo de visión.
+- En horizontal la tira de miniaturas se oculta sola a los 3,5 s y reaparece al
+  tocar la pantalla.
+- En iPhone, Safari no permite pantalla completa real para una página; para
+  verlo sin barras hay que usar **Compartir → Agregar a pantalla de inicio**
+  (`manifest.webmanifest` con `display: standalone`). En Android funciona el
+  botón de pantalla completa del propio visor.
+
 ## Publicación en GitHub Pages
 
-El repositorio ya está preparado (`main` / raíz, `.nojekyll`). Para republicar
+El repositorio está preparado (`main` / raíz, `.nojekyll`). Para republicar
 después de cambiar archivos:
 
 ```bash
@@ -106,7 +118,8 @@ unos 10 minutos más.
 ```
 index.html            listado
 visor.html            visor individual
-assets/               CSS y JS del sitio
+manifest.webmanifest  app instalable (pantalla completa en el celular)
+assets/               CSS, JS e iconos del sitio
 origen/               originales (ignorados por git)
 panoramas/            panoramas web generados
 miniaturas/           miniaturas generadas
