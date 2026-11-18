@@ -1,6 +1,17 @@
 {
-  "titulos": {},
+  "titulos": {
+    "bano-chico": "Baño chico",
+    "bano-grande": "Baño grande"
+  },
   "descripciones": {},
   "ocultas": [],
-  "proyectos": {}
+  "proyectos": {
+    "banios": {
+      "nombre": "Baños",
+      "vistas": [
+        "bano-chico",
+        "bano-grande"
+      ]
+    }
+  }
 }

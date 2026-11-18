@@ -40,6 +40,22 @@
       "modificado": "2026-11-13T17:37:09.800Z",
       "ancho": 6144,
       "alto": 3072
+    },
+    "bano-chico": {
+      "origen": "bano-chico.png",
+      "sha1": "1e1b6c23a062ad90061e13e50ac1bab5ea872adf",
+      "agregado": "2026-11-18T19:45:51.274Z",
+      "modificado": "2026-11-18T19:26:10.228Z",
+      "ancho": 4096,
+      "alto": 2048
+    },
+    "bano-grande": {
+      "origen": "bano-grande.png",
+      "sha1": "f51b795c8ec4b4a970af3c0db4c9030d0890b12f",
+      "agregado": "2026-11-18T19:45:52.169Z",
+      "modificado": "2026-11-18T19:40:08.459Z",
+      "ancho": 4096,
+      "alto": 2048
     }
   }
 }

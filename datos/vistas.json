@@ -1,7 +1,41 @@
 {
-  "generado": "2026-11-18T15:33:16.928Z",
-  "total": 5,
+  "generado": "2026-11-18T19:46:17.881Z",
+  "total": 7,
   "vistas": [
+    {
+      "id": "bano-grande",
+      "titulo": "Baño grande",
+      "descripcion": "",
+      "proyecto": {
+        "slug": "banios",
+        "nombre": "Baños"
+      },
+      "archivo": "panoramas/bano-grande.jpg",
+      "miniatura": "miniaturas/bano-grande.jpg",
+      "ancho": 4096,
+      "alto": 2048,
+      "tamano": 777603,
+      "agregado": "2026-11-18T19:45:52.169Z",
+      "modificado": "2026-11-18T19:40:08.459Z",
+      "oculto": false
+    },
+    {
+      "id": "bano-chico",
+      "titulo": "Baño chico",
+      "descripcion": "",
+      "proyecto": {
+        "slug": "banios",
+        "nombre": "Baños"
+      },
+      "archivo": "panoramas/bano-chico.jpg",
+      "miniatura": "miniaturas/bano-chico.jpg",
+      "ancho": 4096,
+      "alto": 2048,
+      "tamano": 614583,
+      "agregado": "2026-11-18T19:45:51.274Z",
+      "modificado": "2026-11-18T19:26:10.228Z",
+      "oculto": false
+    },
     {
       "id": "terreno-01",
       "titulo": "Terreno 01",
