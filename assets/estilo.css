@@ -567,6 +567,14 @@ body.visor {
   text-decoration: underline;
 }
 
+.capa code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--panel-alto);
+  color: #cfe9ff;
+  font-size: 0.84rem;
+}
+
 @media (max-width: 560px) {
   .marca span {
     display: none;
