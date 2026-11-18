@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "vistas": {
+    "panorama1": {
+      "origen": "Panorama1.png",
+      "sha1": "c585a5cc955fc8db1086db43845d6e00cb6b292b",
+      "agregado": "2026-11-18T15:32:04.095Z",
+      "modificado": "2026-06-18T23:53:59.202Z",
+      "ancho": 4096,
+      "alto": 2048
+    },
+    "panorama2": {
+      "origen": "Panorama2.png",
+      "sha1": "c638eade456f706582ebdcbd581cd9b253b987b2",
+      "agregado": "2026-11-18T15:32:04.983Z",
+      "modificado": "2026-06-19T00:21:32.503Z",
+      "ancho": 4096,
+      "alto": 2048
+    },
+    "panorama3": {
+      "origen": "Panorama3.png",
+      "sha1": "9434c440d990c8bb3d3175aece196bf49bef5e4c",
+      "agregado": "2026-11-18T15:32:05.880Z",
+      "modificado": "2026-06-19T00:47:44.526Z",
+      "ancho": 4096,
+      "alto": 2048
+    },
+    "panorama4": {
+      "origen": "Panorama4.png",
+      "sha1": "3233dee011ad423d4e89addad2f8f80c33a3b4a6",
+      "agregado": "2026-11-18T15:32:06.869Z",
+      "modificado": "2026-06-19T01:05:01.012Z",
+      "ancho": 4096,
+      "alto": 2048
+    },
+    "terreno-01": {
+      "origen": "terreno_01.jpg",
+      "sha1": "41f747f14a2be0684bb0546e82d8984ebde1b56c",
+      "agregado": "2026-11-18T15:32:07.651Z",
+      "modificado": "2026-11-13T17:37:09.800Z",
+      "ancho": 6144,
+      "alto": 3072
+    }
+  }
+}

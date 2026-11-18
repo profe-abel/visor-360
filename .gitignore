@@ -1,0 +1,8 @@
+# Originales pesados: no van al repositorio
+origen/
+
+# Basura de sistema
+node_modules/
+Thumbs.db
+.DS_Store
+*.log

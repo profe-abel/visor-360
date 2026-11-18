@@ -1,0 +1,17 @@
+{
+  "name": "visor-360",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Listado y visor de panoramas 360° para GitHub Pages",
+  "scripts": {
+    "ver": "node scripts/servidor.mjs",
+    "sync": "node scripts/sync.mjs",
+    "solo": "node scripts/ajustes.mjs solo",
+    "todos": "node scripts/ajustes.mjs todos",
+    "proyecto": "node scripts/ajustes.mjs proyecto",
+    "quitar-proyecto": "node scripts/ajustes.mjs quitar-proyecto",
+    "titulo": "node scripts/ajustes.mjs titulo",
+    "publicar": "node scripts/publicar.mjs"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "generado": "2026-11-18T15:33:16.928Z",
+  "total": 5,
+  "vistas": [
+    {
+      "id": "terreno-01",
+      "titulo": "Terreno 01",
+      "descripcion": "",
+      "proyecto": null,
+      "archivo": "panoramas/terreno-01.jpg",
+      "miniatura": "miniaturas/terreno-01.jpg",
+      "ancho": 6144,
+      "alto": 3072,
+      "tamano": 2487010,
+      "agregado": "2026-11-18T15:32:07.651Z",
+      "modificado": "2026-11-13T17:37:09.800Z",
+      "oculto": false
+    },
+    {
+      "id": "panorama4",
+      "titulo": "Panorama 4",
+      "descripcion": "",
+      "proyecto": null,
+      "archivo": "panoramas/panorama4.jpg",
+      "miniatura": "miniaturas/panorama4.jpg",
+      "ancho": 4096,
+      "alto": 2048,
+      "tamano": 947263,
+      "agregado": "2026-11-18T15:32:06.869Z",
+      "modificado": "2026-06-19T01:05:01.012Z",
+      "oculto": false
+    },
+    {
+      "id": "panorama3",
+      "titulo": "Panorama 3",
+      "descripcion": "",
+      "proyecto": null,
+      "archivo": "panoramas/panorama3.jpg",
+      "miniatura": "miniaturas/panorama3.jpg",
+      "ancho": 4096,
+      "alto": 2048,
+      "tamano": 800522,
+      "agregado": "2026-11-18T15:32:05.880Z",
+      "modificado": "2026-06-19T00:47:44.526Z",
+      "oculto": false
+    },
+    {
+      "id": "panorama2",
+      "titulo": "Panorama 2",
+      "descripcion": "",
+      "proyecto": null,
+      "archivo": "panoramas/panorama2.jpg",
+      "miniatura": "miniaturas/panorama2.jpg",
+      "ancho": 4096,
+      "alto": 2048,
+      "tamano": 915176,
+      "agregado": "2026-11-18T15:32:04.983Z",
+      "modificado": "2026-06-19T00:21:32.503Z",
+      "oculto": false
+    },
+    {
+      "id": "panorama1",
+      "titulo": "Panorama 1",
+      "descripcion": "",
+      "proyecto": null,
+      "archivo": "panoramas/panorama1.jpg",
+      "miniatura": "miniaturas/panorama1.jpg",
+      "ancho": 4096,
+      "alto": 2048,
+      "tamano": 1022371,
+      "agregado": "2026-11-18T15:32:04.095Z",
+      "modificado": "2026-06-18T23:53:59.202Z",
+      "oculto": false
+    }
+  ]
+}
