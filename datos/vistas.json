@@ -1,39 +1,73 @@
 {
-  "generado": "2026-11-18T20:04:29.810Z",
-  "total": 7,
+  "generado": "2026-11-19T17:57:09.122Z",
+  "total": 9,
   "vistas": [
     {
-      "id": "bano-grande",
-      "titulo": "Baño grande",
+      "id": "op2",
+      "titulo": "OP2",
       "descripcion": "",
       "proyecto": {
-        "slug": "banios",
-        "nombre": "Baños"
+        "slug": "reforma-de-bano-bd",
+        "nombre": "Reforma de Baño BD"
       },
-      "archivo": "panoramas/bano-grande.jpg",
-      "miniatura": "miniaturas/bano-grande.jpg",
+      "archivo": "panoramas/op2.jpg",
+      "miniatura": "miniaturas/op2.jpg",
       "ancho": 4096,
       "alto": 2048,
-      "tamano": 777603,
-      "agregado": "2026-11-18T19:45:52.169Z",
-      "modificado": "2026-11-18T19:40:08.459Z",
+      "tamano": 710609,
+      "agregado": "2026-11-19T17:56:45.896Z",
+      "modificado": "2026-11-19T17:47:00.690Z",
       "oculto": false
     },
     {
-      "id": "bano-chico",
-      "titulo": "Baño chico",
+      "id": "op2-2",
+      "titulo": "OP2-2",
       "descripcion": "",
       "proyecto": {
-        "slug": "banios",
-        "nombre": "Baños"
+        "slug": "reforma-de-bano-bd",
+        "nombre": "Reforma de Baño BD"
       },
-      "archivo": "panoramas/bano-chico.jpg",
-      "miniatura": "miniaturas/bano-chico.jpg",
+      "archivo": "panoramas/op2-2.jpg",
+      "miniatura": "miniaturas/op2-2.jpg",
       "ancho": 4096,
       "alto": 2048,
-      "tamano": 614583,
-      "agregado": "2026-11-18T19:45:51.274Z",
-      "modificado": "2026-11-18T19:26:10.228Z",
+      "tamano": 688569,
+      "agregado": "2026-11-19T17:56:45.055Z",
+      "modificado": "2026-11-19T17:31:43.010Z",
+      "oculto": false
+    },
+    {
+      "id": "op1",
+      "titulo": "OP1",
+      "descripcion": "",
+      "proyecto": {
+        "slug": "reforma-de-bano-bd",
+        "nombre": "Reforma de Baño BD"
+      },
+      "archivo": "panoramas/op1.jpg",
+      "miniatura": "miniaturas/op1.jpg",
+      "ancho": 4096,
+      "alto": 2048,
+      "tamano": 614541,
+      "agregado": "2026-11-19T17:56:44.163Z",
+      "modificado": "2026-11-18T19:45:50.966Z",
+      "oculto": false
+    },
+    {
+      "id": "op1-2",
+      "titulo": "OP1-2",
+      "descripcion": "",
+      "proyecto": {
+        "slug": "reforma-de-bano-bd",
+        "nombre": "Reforma de Baño BD"
+      },
+      "archivo": "panoramas/op1-2.jpg",
+      "miniatura": "miniaturas/op1-2.jpg",
+      "ancho": 4096,
+      "alto": 2048,
+      "tamano": 777533,
+      "agregado": "2026-11-19T17:56:43.970Z",
+      "modificado": "2026-11-18T19:45:51.833Z",
       "oculto": false
     },
     {

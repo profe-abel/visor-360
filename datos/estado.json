@@ -41,19 +41,35 @@
       "ancho": 6144,
       "alto": 3072
     },
-    "bano-chico": {
-      "origen": "bano-chico.png",
-      "sha1": "1e1b6c23a062ad90061e13e50ac1bab5ea872adf",
-      "agregado": "2026-11-18T19:45:51.274Z",
-      "modificado": "2026-11-18T19:26:10.228Z",
+    "op1-2": {
+      "origen": "op1-2.jpg",
+      "sha1": "f936e9f271dd61b2d398c877d6e78f2f6d017fdb",
+      "agregado": "2026-11-19T17:56:43.970Z",
+      "modificado": "2026-11-18T19:45:51.833Z",
       "ancho": 4096,
       "alto": 2048
     },
-    "bano-grande": {
-      "origen": "bano-grande.png",
-      "sha1": "f51b795c8ec4b4a970af3c0db4c9030d0890b12f",
-      "agregado": "2026-11-18T19:45:52.169Z",
-      "modificado": "2026-11-18T19:40:08.459Z",
+    "op1": {
+      "origen": "op1.jpg",
+      "sha1": "4fc31ecde0953355138db50a228eda7326ce1620",
+      "agregado": "2026-11-19T17:56:44.163Z",
+      "modificado": "2026-11-18T19:45:50.966Z",
+      "ancho": 4096,
+      "alto": 2048
+    },
+    "op2-2": {
+      "origen": "op2-2.png",
+      "sha1": "3f883599d9f951c6953e5cc11ba024bdb239b9ef",
+      "agregado": "2026-11-19T17:56:45.055Z",
+      "modificado": "2026-11-19T17:31:43.010Z",
+      "ancho": 4096,
+      "alto": 2048
+    },
+    "op2": {
+      "origen": "op2.png",
+      "sha1": "765c171d7546ba73d89bbe6eef68601abd94eeb1",
+      "agregado": "2026-11-19T17:56:45.896Z",
+      "modificado": "2026-11-19T17:47:00.690Z",
       "ancho": 4096,
       "alto": 2048
     }

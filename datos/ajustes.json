@@ -1,16 +1,22 @@
 {
   "titulos": {
     "bano-chico": "Baño chico",
-    "bano-grande": "Baño grande"
+    "bano-grande": "Baño grande",
+    "op1": "OP1",
+    "op1-2": "OP1-2",
+    "op2": "OP2",
+    "op2-2": "OP2-2"
   },
   "descripciones": {},
   "ocultas": [],
   "proyectos": {
-    "banios": {
-      "nombre": "Baños",
+    "reforma-de-bano-bd": {
+      "nombre": "Reforma de Baño BD",
       "vistas": [
-        "bano-chico",
-        "bano-grande"
+        "op1",
+        "op1-2",
+        "op2",
+        "op2-2"
       ]
     }
   }
